@@ -31,6 +31,8 @@ public class FileService {
 		        	rFile.setFileExtention(getExtension(f.getName()));
 		        	rFile.setFilePath(f.getPath());
 		        	fileList.add(rFile);
+		        	
+		        	
 		        }
 		        return fileList;
 		    }else{
