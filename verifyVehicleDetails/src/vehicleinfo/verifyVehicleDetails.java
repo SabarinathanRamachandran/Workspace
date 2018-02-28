@@ -224,7 +224,7 @@ public class verifyVehicleDetails {
 			int maxCnt = 0;
 					
 			//Get the vehicle details from the file
-			List<FileBean> fileList = new FileService().getSupportedMIMEtypeFiles("D:/Selenium/ToolsQA/InputFilesVehicleDetails/");
+			List<FileBean> fileList = new FileService().getSupportedMIMEtypeFiles("D:/Selenium/ToolsQA/InputFilesVehicleDetails");
 			if (fileList.size() > 0){
 				for (FileBean file : fileList) {
 					System.out.println("=========================================================================================");
