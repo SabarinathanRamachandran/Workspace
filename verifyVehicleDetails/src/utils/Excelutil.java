@@ -6,7 +6,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import java.io.FileInputStream;
 /**
  * This class is to extract the row data from Excel input file
- * Date Modified: 05/04/2018	 Modified By: Saba
+ * Date Modified: 07/04/2018 , Modified By: Sabarinathan Ramachandran
  * Comments: 
  */
 public class Excelutil {
@@ -26,13 +26,13 @@ public class Excelutil {
     }
 
     public int getRowCount() {
-    	//Get the number of rows in the Excel sheet
+    	//return number of rows in the Excel sheet
         wSheet = wBook.getSheetAt(0);
         return wSheet.getPhysicalNumberOfRows();
     }
 
     public String getRowData(int rowNum) {
-    	//Read the row form the Excel
+    	//return the row content
         try {
         	String rowString = wSheet.getRow(rowNum).getCell(0).getStringCellValue()+"," + wSheet.getRow(rowNum).getCell(1).getStringCellValue()+"," + wSheet.getRow(rowNum).getCell(2).getStringCellValue();
             return rowString;

@@ -8,15 +8,15 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * This Function is to get the file path for the given MIME type
+ * Date Modified: 07/04/2018 , Modified By: Sabarinathan Ramachandran
+ * Comments     : 
+ */
 public class FileService {
 	private static String EXCEL_AND_CSV_MIME_TYPE = "application/vnd.ms-excel";
 	private static String EXCEL_AND_EXCEL_MIME_TYPE = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
 
-	/**
-	 * This Function is to get the file path for the given MIME type
-	 * Date Modified: 05/04/2018	 Modified By: Saba
-	 * Comments     : 
-	 */
 	public List <FileInfoBean> getFileInfo(String fPath) throws IOException{
 	        File afile = new File(fPath);
 	        
@@ -41,7 +41,7 @@ public class FileService {
 
 	/**
 	 * This Function is to get the files that are matching the given MIME type
-	 * Date Modified: 05/04/2018	 Modified By: Saba
+	 * Date Modified: 07/04/2018 , Modified By: Sabarinathan Ramachandran
 	 * Comments     : 
 	 */
 	public List <FileInfoBean> getSupportedMIMEtypeFiles(String fPath) throws IOException{
@@ -60,7 +60,7 @@ public class FileService {
 
 	/**
 	 * This Function is to get the extension of the file
-	 * Date Modified: 05/04/2018	 Modified By: Saba
+	 * Date Modified: 07/04/2018 , Modified By: Sabarinathan Ramachandran
 	 * Comments     : 
 	 */
 	  private static String getExtension(String filename) {

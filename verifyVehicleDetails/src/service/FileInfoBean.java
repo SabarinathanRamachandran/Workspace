@@ -2,7 +2,7 @@ package service;
 
 /**
  * This bean contains the file information
- * Date Modified: 05/04/2018	 Modified By: Saba
+ * Date Modified: 07/04/2018 , Modified By: Sabarinathan Ramachandran
  * Comments: 
  */
 public class FileInfoBean {

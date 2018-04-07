@@ -8,7 +8,7 @@ import java.util.List;
 
 /**
  * This class is to extract the row data from CSV input file
- * Date Modified: 05/04/2018	 Modified By: Saba
+ * Date Modified: 07/04/2018 , Modified By: Sabarinathan Ramachandran
  * Comments: 
  */
 public class CSVutil {
@@ -44,7 +44,7 @@ public class CSVutil {
     }
 
     public String getRowData(int rowNum) {
-    	//Read the content from the csv file
+    	//return the row content
         try {
 			return csvArray[rowNum];
         } catch (Exception e) {

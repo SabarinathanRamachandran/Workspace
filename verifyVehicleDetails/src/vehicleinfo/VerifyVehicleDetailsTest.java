@@ -12,6 +12,11 @@ import java.util.List;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+/**
+ * Main
+ * Date Modified	: 07/04/2018 , Modified By: Sabarinathan Ramachandran
+ * Comments			: 
+ */
 public class VerifyVehicleDetailsTest {
 
 	private static Excelutil excelUtil;
@@ -49,13 +54,11 @@ public class VerifyVehicleDetailsTest {
 
 				//CSV file
 				if("csv".equals(fileInfo.getFileExtention())){
-					System.out.println("File Name:" +fileInfo.getFilename());
-					System.out.println(" ");
-
+					System.out.println("=======" +fileInfo.getFilename()+"=======");
 					csvUtil.openCSVFile(fileInfo.getFilePath());
 					maxCnt = csvUtil.getRowCount();
 					for (i=0;i<maxCnt;i++) {
-						System.out.println("Record:"+i);
+						System.out.println("Record:"+i+1);
 						line = csvUtil.getRowData(i);
 						RunTheTest(line,i);
 						System.out.println(" ");
@@ -64,13 +67,11 @@ public class VerifyVehicleDetailsTest {
 				
 				// Excel file
 				if("xlsx".equals(fileInfo.getFileExtention())){
-					System.out.println("File Name:" +fileInfo.getFilename());
-					System.out.println(" ");
-
+					System.out.println("=======" +fileInfo.getFilename()+"=======");
 					excelUtil.openExcelFile(fileInfo.getFilePath());
 					maxCnt = excelUtil.getRowCount();
 					for (i=0;i<maxCnt;i++) {
-						System.out.println("Record:"+i);
+						System.out.println("Record:"+i+1);
 						line = excelUtil.getRowData(i);
 						RunTheTest(line,i);
 						System.out.println(" ");
@@ -182,7 +183,7 @@ public class VerifyVehicleDetailsTest {
 	 * Is to print the execution log and display the result
 	 */		
 	public static void writeToExecutionResult(String lblStr) throws IOException{
-		//Execution result can be written to the separate text file. Currently printing.
+		//Execution result can be written to the separate text file. Currently printing in the console
 		System.out.println(lblStr);
 	}
 }

@@ -10,8 +10,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 /**
  * This class is to declare the page objects in the Get Vehicle Information from DVLA Pages
- * Date Modified	: 05/04/2018	 
- * Modified By		: Saba
+ * Date Modified	: 07/04/2018 , Modified By: Sabarinathan Ramachandran
  * Comments			: 
  */
 public class PageObjectRepository {
@@ -28,9 +27,6 @@ public class PageObjectRepository {
     public By VEHICLE_REGNO = By.xpath("//*[@id=\"pr3\"]/div/ul/li[1]/span[2]");
     public By VEHICLE_MAKE = By.xpath("//*[@id=\"pr3\"]/div/ul/li[2]/span[2]/strong");
     public By VEHICLE_COLOUR = By.xpath("//*[@id=\"pr3\"]/div/ul/li[3]/span[2]/strong");
-    
-    //By password99Guru = By.name("password");
-    //By titleText = By.className("barone");
 	
 	//Constructor
 	public PageObjectRepository(WebDriver webDriver) {
