@@ -1,0 +1,41 @@
+=======Vehicle1.csv=======
+Record:1
+P: Registration Number	:Y132 JGC
+P: Make			:TOYOTA
+P: Colour		:RED
+ 
+Record:2
+P: Registration Number	:P44 VTH
+P: Make			:CHEVROLET
+P: Colour		:RED
+ 
+Record:3
+P: Registration Number	:BT52 OFU
+F: Make			:Expected: BMW - Actual: PEUGEOT
+P: Colour		:SILVER
+ 
+Record:4
+Invalid registration number 1132JGC
+ 
+Record:5
+P: Registration Number	:FX65 XUS
+P: Make			:BMW
+F: Colour		:Expected: GREEN - Actual: GREY
+ 
+Record:6
+Vehicle details could not be found for registration number Y222JGC
+ 
+Record:7
+Registration number not entered.
+ 
+=======Vehicle2.xlsx=======
+Record:1
+P: Registration Number	:P44 VTH
+P: Make			:CHEVROLET
+P: Colour		:RED
+ 
+Record:2
+P: Registration Number	:BT52 OFU
+P: Make			:PEUGEOT
+P: Colour		:SILVER
+ 

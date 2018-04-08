@@ -18,7 +18,7 @@ public class PageObjectRepository {
 	private WebDriver driver;
     public By START_BUTTON = By.xpath("//*[@id=\"get-started\"]/a");
     public By REGNO_INPUTTEXT = By.id("Vrm");
-    public By REGNO_NOTVALIDFORMAT_LABEL = By.xpath("//*[@id=\"content\"]/form/div/div/div[1]/ul/a");
+    public By REGNO_NOTVALID_LABEL = By.xpath("//*[@id=\"content\"]/form/div/div/div[1]/ul/a");
     public By CONTINUE_BUTTON = By.name("Continue");
     public By BACK_LINK = By.xpath("//*[@id=\"content\"]/div/a");
     public By SEARCH_AGAIN_LINK = By.xpath("//*[@id=\"content\"]/div/div/a");
@@ -27,7 +27,9 @@ public class PageObjectRepository {
     public By VEHICLE_REGNO = By.xpath("//*[@id=\"pr3\"]/div/ul/li[1]/span[2]");
     public By VEHICLE_MAKE = By.xpath("//*[@id=\"pr3\"]/div/ul/li[2]/span[2]/strong");
     public By VEHICLE_COLOUR = By.xpath("//*[@id=\"pr3\"]/div/ul/li[3]/span[2]/strong");
-	
+	public static final String INVALID_FORMAT_LABEL = "You must enter your registration number in a valid format";
+	public static final String PLEASE_ENTER_REGISTRATION_NUMBER_LABEL = "Please enter your registration number";
+    
 	//Constructor
 	public PageObjectRepository(WebDriver webDriver) {
 		this.driver = webDriver;
@@ -79,7 +81,7 @@ public class PageObjectRepository {
 	public Boolean isElementVisible(By elementStr) throws IOException{
 		//check the element
 		try{
-		(new WebDriverWait(driver,10)).until(new ExpectedCondition<Boolean>(){
+		(new WebDriverWait(driver,3)).until(new ExpectedCondition<Boolean>(){
 			public Boolean apply(WebDriver d){
 				return driver.findElement(elementStr).isDisplayed();
 			}
@@ -93,12 +95,12 @@ public class PageObjectRepository {
 	 /**
 	 * This Function is to check invalid format error
 	 */		
-	public Boolean isInvalidFormatError() throws IOException{
+	public Boolean isInvalidRegistrationNumberError(String lblStr) throws IOException{
 		//check the element
 		try{
 		(new WebDriverWait(driver,3)).until(new ExpectedCondition<Boolean>(){
 			public Boolean apply(WebDriver d){
-				return driver.findElement(REGNO_NOTVALIDFORMAT_LABEL).isDisplayed();
+				return driver.findElement(REGNO_NOTVALID_LABEL).isDisplayed();
 			}
 		});
 		}catch (Exception e){
@@ -106,8 +108,8 @@ public class PageObjectRepository {
 		}
 		
 		//check the string
-		String rStr = driver.findElement(REGNO_NOTVALIDFORMAT_LABEL).getText();
-		if (rStr.equals("You must enter your registration number in a valid format")){
+		String rStr = driver.findElement(REGNO_NOTVALID_LABEL).getText();
+		if (rStr.equals(lblStr)){
 			return true;	
 		}else{
 			return false;

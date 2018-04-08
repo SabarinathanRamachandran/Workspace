@@ -1,0 +1,16 @@
+START Time:201804081509
+Navigated to DVLA site.
+Extracted the list of files with supported MIME type.
+CSV file found.
+Running the test for - Y132JGC,TOYOTA,RED
+Running the test for - P44 VTH,CHEVROLET,RED
+Running the test for - BT52 OFU,BMW,SILVER
+Running the test for - 1132JGC,BMW,BLUE
+Running the test for - FX65XUS,BMW,GREEN
+Running the test for - Y222JGC,PUGOUT,RED
+Running the test for - ,TOYOTO,SILVER
+Excel file found.
+Running the test for - P44VTH,CHEVROLET,RED
+Running the test for - bt52OFU,PEUGEOT,SILVER
+Test Execution Completed.
+END Time:201804081510

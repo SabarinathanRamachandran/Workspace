@@ -1,4 +1,4 @@
-package vehicleinfo;
+package test;
 
 import static org.junit.Assert.*;
 
@@ -10,7 +10,7 @@ import org.junit.Test;
 import service.FileInfoBean;
 import service.FileService;
 
-public class FileServiceTest {
+public class FileServiceJunitTest {
 
 	@Test
 	public void testAllFiles() throws IOException {
